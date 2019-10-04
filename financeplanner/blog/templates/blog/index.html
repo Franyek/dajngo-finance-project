@@ -1,0 +1,8 @@
+{% if latest_blog_posts %}
+    {% for blog_post in latest_blog_posts %}
+        <h2>{{ blog_post.title }}</h2>
+        <p>{{ blog_post.get_first_paragraph }}</p>
+    {% endfor %}
+{% else %}
+    <p>No blog posts are available</p>
+{% endif %}
